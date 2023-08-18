@@ -58,7 +58,7 @@ const logInUser = asyncHandler(async (req, res) => {
                 id: user.id
             }
             }, process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "1m" }
+            { expiresIn: "15m" }
         );
         res.status(200).json({ accessToken });
 
@@ -70,9 +70,9 @@ const logInUser = asyncHandler(async (req, res) => {
 
 //@description >>> Current user info
 //@route GET /api/users/current
-//@access = private
+//@access = private (accessToken needed)  check >>> '../middleware/validateTokenHandler'
 const currentUser = asyncHandler(async (req, res) => {
-    res.json({ message: 'Current User Information'});
+    res.json(req.user);  //from validateTokenHandler.js(middleware)
 });
 
 module.exports = { registerUser , logInUser, currentUser };

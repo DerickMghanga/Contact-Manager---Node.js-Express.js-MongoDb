@@ -8,6 +8,10 @@ const {
     updateContact,
     deleteContact
 } = require('../controllers/contactController');
+const validateToken = require('../middleware/validateTokenHandler');
+
+//Validates the accessToken on all contacts routes
+router.use(validateToken);      //also provides the user_id emebedded in the token
 
 //route handlers & their controllers
 

@@ -1,4 +1,4 @@
-//This handler verifies the accesstoken for specific users when logging in
+//This handler verifies the accesstoken for specific users when logging in('/current' route)
 // extract User info from the token
 
 const asyncHandler = require('express-async-handler');
