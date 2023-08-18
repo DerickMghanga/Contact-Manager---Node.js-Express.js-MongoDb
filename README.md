@@ -6,7 +6,7 @@ JWT -  used to generate access tokens, used for authentication when logging in a
 
 bcrypt - encrypt & decrypt passwords stored in MongoDB for security
 
-mongoose - database midlleware to easily interact with MongoDB database from the application
+mongoose - database middleware to easily interact with MongoDB database from the application
 
 nodemon - auto restarts the server during development
 
